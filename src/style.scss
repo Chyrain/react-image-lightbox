@@ -113,7 +113,7 @@ $maxCaptionHeight: 150px;
 
 .caption,
 .toolbar {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     position: absolute;
     left: 0;
     right: 0;
@@ -122,6 +122,7 @@ $maxCaptionHeight: 150px;
 }
 
 .caption {
+    background-color: rgba(0, 0, 0, 0.5);
     bottom: 0;
     max-height: $maxCaptionHeight;
     overflow: auto;
@@ -191,11 +192,17 @@ $maxCaptionHeight: 150px;
 }
 
 .builtinButton {
-    width: 40px;
+    /* width: 40px; */
+    width: 35px;
     height: 35px;
     cursor: pointer;
-    border: none;
+    /* border: none; */
     opacity: 0.7;
+    border: 2px solid transparent;
+    margin: 0 2px;
+    padding: 16px;
+    background-color: rgba(0,0,0,.5) !important;
+    border-radius: 20px;
 
     &:hover {
         opacity: 1;
