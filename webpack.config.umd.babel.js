@@ -34,9 +34,10 @@ module.exports = {
         autoprefixer({ browsers: ['IE >= 9', '> 1%'] }),
     ],
     externals: {
-        react: 'react',
+        'react': 'react',
         'react-dom': 'react-dom',
         'react-modal': 'react-modal',
+        'prop-types': 'prop-types'
     },
     module: {
         loaders: [

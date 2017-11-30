@@ -4,7 +4,8 @@
  * @license Open source under the MIT License
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import {
     translate,
@@ -1662,123 +1663,123 @@ class ReactImageLightbox extends Component {
     }
 }
 
-ReactImageLightbox.propTypes = {
-    //-----------------------------
-    // Image sources
-    //-----------------------------
+// ReactImageLightbox.propTypes = {
+//     //-----------------------------
+//     // Image sources
+//     //-----------------------------
 
-    // Main display image url
-    mainSrc: PropTypes.string.isRequired, // eslint-disable-line react/no-unused-prop-types
+//     // Main display image url
+//     mainSrc: PropTypes.string.isRequired, // eslint-disable-line react/no-unused-prop-types
 
-    // Previous display image url (displayed to the left)
-    // If left undefined, movePrev actions will not be performed, and the button not displayed
-    prevSrc: PropTypes.string,
+//     // Previous display image url (displayed to the left)
+//     // If left undefined, movePrev actions will not be performed, and the button not displayed
+//     prevSrc: PropTypes.string,
 
-    // Next display image url (displayed to the right)
-    // If left undefined, moveNext actions will not be performed, and the button not displayed
-    nextSrc: PropTypes.string,
+//     // Next display image url (displayed to the right)
+//     // If left undefined, moveNext actions will not be performed, and the button not displayed
+//     nextSrc: PropTypes.string,
 
-    //-----------------------------
-    // Image thumbnail sources
-    //-----------------------------
+//     //-----------------------------
+//     // Image thumbnail sources
+//     //-----------------------------
 
-    // Thumbnail image url corresponding to props.mainSrc
-    mainSrcThumbnail: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
+//     // Thumbnail image url corresponding to props.mainSrc
+//     mainSrcThumbnail: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
 
-    // Thumbnail image url corresponding to props.prevSrc
-    prevSrcThumbnail: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
+//     // Thumbnail image url corresponding to props.prevSrc
+//     prevSrcThumbnail: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
 
-    // Thumbnail image url corresponding to props.nextSrc
-    nextSrcThumbnail: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
+//     // Thumbnail image url corresponding to props.nextSrc
+//     nextSrcThumbnail: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
 
-    //-----------------------------
-    // Event Handlers
-    //-----------------------------
+//     //-----------------------------
+//     // Event Handlers
+//     //-----------------------------
 
-    // Close window event
-    // Should change the parent state such that the lightbox is not rendered
-    onCloseRequest: PropTypes.func.isRequired,
+//     // Close window event
+//     // Should change the parent state such that the lightbox is not rendered
+//     onCloseRequest: PropTypes.func.isRequired,
 
-    // Move to previous image event
-    // Should change the parent state such that props.prevSrc becomes props.mainSrc,
-    //  props.mainSrc becomes props.nextSrc, etc.
-    onMovePrevRequest: PropTypes.func,
+//     // Move to previous image event
+//     // Should change the parent state such that props.prevSrc becomes props.mainSrc,
+//     //  props.mainSrc becomes props.nextSrc, etc.
+//     onMovePrevRequest: PropTypes.func,
 
-    // Move to next image event
-    // Should change the parent state such that props.nextSrc becomes props.mainSrc,
-    //  props.mainSrc becomes props.prevSrc, etc.
-    onMoveNextRequest: PropTypes.func,
+//     // Move to next image event
+//     // Should change the parent state such that props.nextSrc becomes props.mainSrc,
+//     //  props.mainSrc becomes props.prevSrc, etc.
+//     onMoveNextRequest: PropTypes.func,
 
-    // Called when an image fails to load
-    // (imageSrc: string, srcType: string, errorEvent: object): void
-    onImageLoadError: PropTypes.func,
+//     // Called when an image fails to load
+//     // (imageSrc: string, srcType: string, errorEvent: object): void
+//     onImageLoadError: PropTypes.func,
 
-    //-----------------------------
-    // Download discouragement settings
-    //-----------------------------
+//     //-----------------------------
+//     // Download discouragement settings
+//     //-----------------------------
 
-    // Enable download discouragement (prevents [right-click -> Save Image As...])
-    discourageDownloads: PropTypes.bool,
+//     // Enable download discouragement (prevents [right-click -> Save Image As...])
+//     discourageDownloads: PropTypes.bool,
 
-    //-----------------------------
-    // Animation settings
-    //-----------------------------
+//     //-----------------------------
+//     // Animation settings
+//     //-----------------------------
 
-    // Disable all animation
-    animationDisabled: PropTypes.bool,
+//     // Disable all animation
+//     animationDisabled: PropTypes.bool,
 
-    // Disable animation on actions performed with keyboard shortcuts
-    animationOnKeyInput: PropTypes.bool,
+//     // Disable animation on actions performed with keyboard shortcuts
+//     animationOnKeyInput: PropTypes.bool,
 
-    // Animation duration (ms)
-    animationDuration: PropTypes.number,
+//     // Animation duration (ms)
+//     animationDuration: PropTypes.number,
 
-    //-----------------------------
-    // Keyboard shortcut settings
-    //-----------------------------
+//     //-----------------------------
+//     // Keyboard shortcut settings
+//     //-----------------------------
 
-    // Required interval of time (ms) between key actions
-    // (prevents excessively fast navigation of images)
-    keyRepeatLimit: PropTypes.number,
+//     // Required interval of time (ms) between key actions
+//     // (prevents excessively fast navigation of images)
+//     keyRepeatLimit: PropTypes.number,
 
-    // Amount of time (ms) restored after each keyup
-    // (makes rapid key presses slightly faster than holding down the key to navigate images)
-    keyRepeatKeyupBonus: PropTypes.number,
+//     // Amount of time (ms) restored after each keyup
+//     // (makes rapid key presses slightly faster than holding down the key to navigate images)
+//     keyRepeatKeyupBonus: PropTypes.number,
 
-    //-----------------------------
-    // Image info
-    //-----------------------------
+//     //-----------------------------
+//     // Image info
+//     //-----------------------------
 
-    // Image title
-    imageTitle: PropTypes.node,
+//     // Image title
+//     imageTitle: PropTypes.node,
 
-    // Image caption
-    imageCaption: PropTypes.node,
+//     // Image caption
+//     imageCaption: PropTypes.node,
 
-    //-----------------------------
-    // Lightbox style
-    //-----------------------------
+//     //-----------------------------
+//     // Lightbox style
+//     //-----------------------------
 
-    // Set z-index style, etc., for the parent react-modal (format: https://github.com/reactjs/react-modal#styles )
-    reactModalStyle: PropTypes.object,
+//     // Set z-index style, etc., for the parent react-modal (format: https://github.com/reactjs/react-modal#styles )
+//     reactModalStyle: PropTypes.object,
 
-    // Padding (px) between the edge of the window and the lightbox
-    imagePadding: PropTypes.number,
+//     // Padding (px) between the edge of the window and the lightbox
+//     imagePadding: PropTypes.number,
 
-    //-----------------------------
-    // Other
-    //-----------------------------
+//     //-----------------------------
+//     // Other
+//     //-----------------------------
 
-    // Array of custom toolbar buttons
-    toolbarButtons: PropTypes.arrayOf(PropTypes.node),
+//     // Array of custom toolbar buttons
+//     toolbarButtons: PropTypes.arrayOf(PropTypes.node),
 
-    // When true, clicks outside of the image close the lightbox
-    clickOutsideToClose: PropTypes.bool,
+//     // When true, clicks outside of the image close the lightbox
+//     clickOutsideToClose: PropTypes.bool,
 
-    // Set to false to disable zoom functionality and hide zoom buttons
-    enableZoom: PropTypes.bool,
-    enableRotate: PropTypes.bool
-};
+//     // Set to false to disable zoom functionality and hide zoom buttons
+//     enableZoom: PropTypes.bool,
+//     enableRotate: PropTypes.bool
+// };
 
 ReactImageLightbox.defaultProps = {
     onMovePrevRequest: () => {},
